@@ -26,4 +26,8 @@ export class Stack<StackIn, StackOut, StackNextIn> {
 
     return new Stack(composed)
   }
+
+  get() {
+    return this.middleware(x => x)
+  }
 }
